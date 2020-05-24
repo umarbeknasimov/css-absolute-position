@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Dosis">
+		<link rel="stylesheet" href="https://get.mavo.io/mavo.css" />
+		<script src="https://get.mavo.io/mavo.js"></script>
+		<title>Absolute Position in CSS</title>
+	</head>
+	<body>
+		<header>
+			<h1>Absolute Position in CSS</h1>
+		</header>
+
+		<section mv-storage="local" mv-app="position-absolute" mv-autosave="">
+			<div class="sliders">
+				<div class="slider">
+					<h2 class="big-title">Blue Box</h2>
+					<label>
+						Top: 
+						<input type="range" property="bigBoxTop" min="0" max="100">
+					</label>
+					<label>
+						Left: 
+						<input type="range" property="bigBoxLeft" min="0" max="100">
+					</label>
+				</div>
+
+				<div class="small slider">
+					<h2 class="box1-title">Box1</h2>
+					<label>
+						Top:
+						<input type="range" class="top" property="smallBoxTop1" min="0" max="150">
+					</label>
+				</div>
+
+				<div class="small slider">
+					<h2 class="box2-title">Box2</h2>
+					<label>
+						Top: 
+						<input type="range" class="top" property="smallBoxTop2" min="0" max="150">
+					</label>
+				</div>
+				<div class="z-slider">
+					<h2 class="z-slider-title">Z-index</h2>
+					<label>
+						<span class="box1-title">Box1</span>
+						<select name="compare-z" property="zIndex">
+							<option value="0">&gt;</option>
+							<option value="1">=</option>
+							<option value="2">&lt;</option>
+						</select>
+						<span class="box2-title">Box2</span>
+					</label>
+				</div>
+			</div>
+			<div class="outer-box box">
+				<div class="small-box box" style="position: absolute;
+				top: [bigBoxTop]px;
+				left: [bigBoxLeft]px;">
+					<div class="smallest-box box" id="box1" style="position: absolute;
+					top: [smallBoxTop1]px;
+					z-index: 1">
+					<span>1</span>
+					</div>
+					<div class="smallest-box box" id="box2" style="position: absolute;
+					top: [smallBoxTop2]px;
+					z-index: [zIndex];">
+					<span>2</span>
+					</div>
+				</div>
+			</div>
+			<div class="css-output">
+				<div>
+					<h2 class="output-title big-title">Blue Box</h2>
+					<p class="description">Position relative to its parent box: Black Box</p>
+					<code>
+						position: absolute;
+						top: [bigBoxTop]px;
+						left: [bigBoxLeft]px;
+					</code>
+					<h2 class="output-title box1-title">Box1</h2>
+					<p class="description">Position relative to its parent box: Blue Box</p>
+					<p class="description" hidden="[zIndex == 0 or zIndex == 1]">z-index lower than z-index of sibling box, so it's 'below' its sibling box: Box2</p>
+					<code>
+						position: absolute;
+						top: [smallBoxTop1]px;
+						z-index: 1;
+					</code>
+					<h2 class="output-title box2-title">Box2</h2>
+					<p class="description">Position relative to its parent box: Blue Box</p>
+					<p class="description" hidden="[zIndex == 1 or zIndex == 2]">z-index lower than z-index of sibling box, so it's 'below' its sibling box: Box1</p>
+					<p class="description" hidden="[zIndex == 2 or zIndex == 0]">z-index same as earlier sibling box, so it's in 'front' of its sibling box: Box1</p>
+					
+					<code>
+						position: absolute;
+						top: [smallBoxTop2]px;
+						z-index: [zIndex];
+					</code>
+				</div>
+				
+			</div>
+		</section>
+	</body>
+</html>
