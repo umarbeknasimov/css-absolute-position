@@ -7,7 +7,7 @@
 body {
     font-family: 'Dosis', sans-serif;
     background-color: aliceblue;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 h1 {
@@ -56,7 +56,7 @@ section {
 
 .big {
     font-size: 175%;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.3em;
 }
 
 
@@ -88,12 +88,12 @@ section {
 
 .box1-title {
     color: var(--colorBox1);
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 .box2-title {
     color: var(--colorBox2);
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 .result-list {
@@ -110,9 +110,13 @@ header {
 }
 
 .big-title {
-    font-size: 2.5em;
+    font-size: 2em;
     color: var(--colorBlue);
+    margin-bottom: 0.5em;
 }
+
+
+
 
 .z-slider-title {
     border-top: 0.1em var(--colorBlue) solid;
@@ -144,9 +148,6 @@ p.continue {
     font-style: italic;
 }
 
-.output-title {
-    margin-bottom: 1em;
-}
 
 code {
     border-radius: 5%;
