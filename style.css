@@ -7,6 +7,7 @@
 body {
     font-family: 'Dosis', sans-serif;
     background-color: aliceblue;
+    font-size: 20px;
 }
 
 h1 {
@@ -45,6 +46,12 @@ section {
 .slider {
     display: flex;
     flex-flow: column;
+}
+
+.slider label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .big {
@@ -128,8 +135,12 @@ header {
 }
 
 .description {
+    margin: 1em 0 0.25em 0;
+    font-style: italic;
+}
+
+p.continue {
     margin-top: 0;
-    margin-bottom: 1em;
     font-style: italic;
 }
 
@@ -141,5 +152,6 @@ code {
     border-radius: 5%;
     border: 1px lightgrey solid;
     padding: .2em;
+    font-size: 15px;
 }
 

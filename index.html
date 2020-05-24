@@ -83,7 +83,8 @@
 					</code>
 					<h2 class="output-title box1-title">Box1</h2>
 					<p class="description">Position relative to its parent box: Blue Box</p>
-					<p class="description" hidden="[zIndex == 0 or zIndex == 1]">z-index lower than z-index of sibling box, so it's 'below' its sibling box: Box2</p>
+					<p class="description" hidden="[zIndex == 0 or zIndex == 1]">z-index lower than z-index of sibling box,</p> 
+					<p class="continue" hidden="[zIndex == 0 or zIndex == 1]">so it's 'below' its sibling box: Box2</p>
 					<code>
 						position: absolute;
 						top: [smallBoxTop1]px;
@@ -91,8 +92,11 @@
 					</code>
 					<h2 class="output-title box2-title">Box2</h2>
 					<p class="description">Position relative to its parent box: Blue Box</p>
-					<p class="description" hidden="[zIndex == 1 or zIndex == 2]">z-index lower than z-index of sibling box, so it's 'below' its sibling box: Box1</p>
-					<p class="description" hidden="[zIndex == 2 or zIndex == 0]">z-index same as earlier sibling box, so it's in 'front' of its sibling box: Box1</p>
+					<p class="description" hidden="[zIndex == 1 or zIndex == 2]">z-index lower than z-index of sibling box,</p>
+					<p class="continue" hidden="[zIndex == 1 or zIndex == 2]">so it's 'below' its sibling box: Box1</p>
+					<p class="description" hidden="[zIndex == 2 or zIndex == 0]">z-index same as earlier sibling box,</p> 
+					<p class="continue" hidden="[zIndex == 2 or zIndex == 0]">so it's in 'front' of its sibling box: Box1</p>
+					
 					
 					<code>
 						position: absolute;
